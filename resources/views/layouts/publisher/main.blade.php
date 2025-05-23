@@ -3,3 +3,4 @@
 @yield('main-content')
 
 @include('layouts.publisher.footer')
+@yield('partial-scripts')

@@ -61,7 +61,7 @@
     Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
   }
 </script>
-@yield('partial-scripts')
+
 </body>
 
 </html>
