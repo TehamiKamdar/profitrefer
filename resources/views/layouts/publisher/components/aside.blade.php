@@ -5,14 +5,14 @@
     <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html "
       target="_blank">
       <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-      <span class="ms-1 font-weight-bold">Soft UI Dashboard 3</span>
+      <span class="ms-1 font-weight-bold">Profit Refer</span>
     </a>
   </div>
   <hr class="horizontal dark mt-0">
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link  active" href="../pages/dashboard.html">
+        <a class="nav-link  active" href="{{route('publisher.dashboard')}}">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -65,19 +65,19 @@
         <div class="collapse" id="adverstisersMenu">
           <ul class="nav ms-4 ps-3">
             <li class="nav-item">
-              <a class="nav-link" href="./my-advertisers.html">
+              <a class="nav-link" href="{{route('publisher.my-advertisers')}}">
                 <span class="sidenav-mini-icon"> <i class="fas fa-check-circle"></i> </span>
                 <span class="sidenav-normal"> My Advertisers </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./new-advertisers.html">
+              <a class="nav-link" href="{{route('publisher.new-advertisers')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> New Advertisers </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./find-advertisers.html">
+              <a class="nav-link" href="{{route('publisher.find-advertisers')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Find Advertisers </span>
               </a>
@@ -111,13 +111,13 @@
         <div class="collapse" id="reportsMenu">
           <ul class="nav ms-4 ps-3">
             <li class="nav-item">
-              <a class="nav-link" href="./transactions.html">
+              <a class="nav-link" href="{{route('publisher.transactions')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Transactions </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./performance.html">
+              <a class="nav-link" href="{{route('publisher.advertiser-performance')}}">
                 <span class="sidenav-mini-icon"> + </span>
                 <span class="sidenav-normal"> Performance </span>
               </a>
@@ -152,19 +152,19 @@
         <div class="collapse" id="promotionalMenu">
           <ul class="nav ms-4 ps-3">
             <li class="nav-item">
-              <a class="nav-link" href="./coupons.html">
+              <a class="nav-link" href="{{route('publisher.coupons')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Coupons </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./text-links.html">
+              <a class="nav-link" href="{{route('publisher.text-links')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Text Links </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./deep-links.html">
+              <a class="nav-link" href="{{route('publisher.deep-links')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Deep Links </span>
               </a>
@@ -200,13 +200,13 @@
         <div class="collapse" id="financeMenu">
           <ul class="nav ms-4 ps-3">
             <li class="nav-item">
-              <a class="nav-link" href="./overview.html">
+              <a class="nav-link" href="{{route('publisher.finance-overview')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Overview </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./payments.html">
+              <a class="nav-link" href="{{route('publisher.payments')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Payments </span>
               </a>
@@ -241,19 +241,19 @@
         <div class="collapse" id="toolsMenu">
           <ul class="nav ms-4 ps-3">
             <li class="nav-item">
-              <a class="nav-link" href="./link-generator.html">
+              <a class="nav-link" href="{{route('publisher.link-generator')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Link Generator </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./api-integration.html">
+              <a class="nav-link" href="{{route('publisher.api')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> API Integration </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./download-files.html">
+              <a class="nav-link" href="{{route('publisher.download-export-files')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Download Export Files </span>
               </a>

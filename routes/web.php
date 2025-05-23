@@ -30,7 +30,7 @@ Route::group(["prefix"=> "publisher", "as" => "publisher."], function () {
 
     //Publisher -> Advertisers Pages
     Route::get('my_advertisers', [PublisherAdvertiserController::class,'getMyAdvertisers'])->name('my-advertisers');
-    Route::get('new_advertisers', [PublisherHomeController::class,'getNewAdvertisers'])->name('new-advertisers');
+    Route::get('new_advertisers', [PublisherAdvertiserController::class,'getNewAdvertisers'])->name('new-advertisers');
     Route::get('find_advertisers', [PublisherAdvertiserController::class,'getFindAvertisers'])->name('find-advertisers');
     Route::get('view_advertisers/{advertiser?}', [PublisherAdvertiserController::class,'viewAdvertisers'])->name('view-advertisers');
 

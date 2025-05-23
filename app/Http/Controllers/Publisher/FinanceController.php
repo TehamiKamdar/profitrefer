@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class FinanceController extends Controller
 {
     public function getFinanceOverview(){
-        return view();
+        return view('publisher.finance.overview');
     }
 
     public function getPayments(){
-        return view();
+        return view('publisher.finance.payments');
     }
 }

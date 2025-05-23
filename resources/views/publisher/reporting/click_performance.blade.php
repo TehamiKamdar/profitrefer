@@ -2,7 +2,7 @@
 
 
 @section('main-content')
-  <div class="d-flex justify-content-end"><a href="performance.html" class="btn btn-secondary">Advertisers
+  <div class="d-flex justify-content-end"><a href="{{route('publisher.advertiser-performance')}}" class="btn btn-secondary">Advertisers
     Performance</a></div>
 
   <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
@@ -319,6 +319,7 @@
 
 
 @section('partial-scripts')
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
