@@ -1,7 +1,7 @@
 @extends('layouts.publisher.layout')
 
 @section('main-content')
-  <div class="d-flex justify-content-end"><a href="{{route('publisher.click-performance')}}" class="btn btn-secondary">Clicks Performance</a>
+  <div class="d-flex justify-content-end"><a href="{{route('publisher.report.click-performance')}}" class="btn btn-secondary">Clicks Performance</a>
   </div>
 
   <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">

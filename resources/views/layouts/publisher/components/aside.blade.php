@@ -12,7 +12,7 @@
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link  active" href="{{route('publisher.dashboard')}}">
+        <a class="nav-link {{ Route::is('publisher.dashboard') ? 'active' : '' }}" href="{{route('publisher.dashboard')}}">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#adverstisersMenu" role="button"
+        <a class="nav-link collapsed {{ Route::is('publisher.advertiser.*') ? 'active' : '' }}" data-bs-toggle="collapse" href="#adverstisersMenu" role="button"
           aria-expanded="false" aria-controls="adverstisersMenu">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -62,22 +62,22 @@
           </div>
           <span class="nav-link-text ms-1">Advertisers</span>
         </a>
-        <div class="collapse" id="adverstisersMenu">
+        <div class="collapse {{ Route::is('publisher.advertiser.*') ? 'show' : '' }}" id="adverstisersMenu">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.my-advertisers')}}">
+            <li class="nav-item {{ Route::is('publisher.advertiser.my-advertisers') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.advertiser.my-advertisers')}}">
                 <span class="sidenav-mini-icon"> <i class="fas fa-check-circle"></i> </span>
                 <span class="sidenav-normal"> My Advertisers </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.new-advertisers')}}">
+            <li class="nav-item {{ Route::is('publisher.advertiser.new-advertisers') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.advertiser.new-advertisers')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> New Advertisers </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.find-advertisers')}}">
+            <li class="nav-item {{ Route::is('publisher.advertiser.find-advertisers') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.advertiser.find-advertisers')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Find Advertisers </span>
               </a>
@@ -91,7 +91,7 @@
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Reports Management</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#reportsMenu" role="button" aria-expanded="false"
+        <a class="nav-link collapsed {{ Route::is('publisher.report.*') ? 'active' : '' }}" data-bs-toggle="collapse" href="#reportsMenu" role="button" aria-expanded="false"
           aria-controls="reportsMenu">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -108,16 +108,16 @@
           </div>
           <span class="nav-link-text ms-1">Reporting</span>
         </a>
-        <div class="collapse" id="reportsMenu">
+        <div class="collapse {{ Route::is('publisher.report.*') ? 'show' : '' }}" id="reportsMenu">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.transactions')}}">
+            <li class="nav-item {{ Route::is('publisher.report.transactions') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.report.transactions')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Transactions </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.advertiser-performance')}}">
+            <li class="nav-item {{ Route::is('publisher.report.advertiser-performance') || Route::is('publisher.report.click-performance') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.report.advertiser-performance')}}">
                 <span class="sidenav-mini-icon"> + </span>
                 <span class="sidenav-normal"> Performance </span>
               </a>
@@ -132,7 +132,7 @@
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Creatives</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#promotionalMenu" role="button"
+        <a class="nav-link collapsed {{ Route::is('publisher.promote.*') ? 'active' : '' }}" data-bs-toggle="collapse" href="#promotionalMenu" role="button"
           aria-expanded="false" aria-controls="promotionalMenu">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -149,22 +149,22 @@
           </div>
           <span class="nav-link-text ms-1">Promotional</span>
         </a>
-        <div class="collapse" id="promotionalMenu">
+        <div class="collapse {{ Route::is('publisher.promote.*') ? 'show' : '' }}" id="promotionalMenu">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.coupons')}}">
+            <li class="nav-item {{ Route::is('publisher.promote.coupons') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.promote.coupons')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Coupons </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.text-links')}}">
+            <li class="nav-item {{ Route::is('publisher.promote.text-links') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.promote.text-links')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Text Links </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.deep-links')}}">
+            <li class="nav-item {{ Route::is('publisher.promote.deep-links') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.promote.deep-links')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Deep Links </span>
               </a>
@@ -180,7 +180,7 @@
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Finance Management</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#financeMenu" role="button" aria-expanded="false"
+        <a class="nav-link collapsed {{ Route::is('publisher.finance.*') ? 'active' : '' }}" data-bs-toggle="collapse" href="#financeMenu" role="button" aria-expanded="false"
           aria-controls="financeMenu">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -197,16 +197,16 @@
           </div>
           <span class="nav-link-text ms-1">Finance</span>
         </a>
-        <div class="collapse" id="financeMenu">
+        <div class="collapse {{ Route::is('publisher.finance.*') ? 'show' : '' }}" id="financeMenu">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.finance-overview')}}">
+            <li class="nav-item {{ Route::is('publisher.finance.finance-overview') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.finance.finance-overview')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Overview </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.payments')}}">
+            <li class="nav-item {{ Route::is('publisher.finance.payments') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.finance.payments')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Payments </span>
               </a>
@@ -221,7 +221,7 @@
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Tools</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#toolsMenu" role="button" aria-expanded="false"
+        <a class="nav-link collapsed {{ Route::is('publisher.tools.*') ? 'active' : '' }}" data-bs-toggle="collapse" href="#toolsMenu" role="button" aria-expanded="false"
           aria-controls="toolsMenu">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -238,22 +238,22 @@
           </div>
           <span class="nav-link-text ms-1">Tools</span>
         </a>
-        <div class="collapse" id="toolsMenu">
+        <div class="collapse {{ Route::is('publisher.tools.*') ? 'show' : '' }}" id="toolsMenu">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.link-generator')}}">
+            <li class="nav-item {{ Route::is('publisher.tools.link-generator') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.tools.link-generator')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Link Generator </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.api')}}">
+            <li class="nav-item {{ Route::is('publisher.tools.api') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.tools.api')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> API Integration </span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.download-export-files')}}">
+            <li class="nav-item {{ Route::is('publisher.tools.download-export-files') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.tools.download-export-files')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> Download Export Files </span>
               </a>
@@ -267,7 +267,7 @@
         <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Settings</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-toggle="collapse" href="#settingsMenu" role="button" aria-expanded="false"
+        <a class="nav-link collapsed {{ Route::is('publisher.profile.*') ? 'active' : '' }}" data-bs-toggle="collapse" href="#settingsMenu" role="button" aria-expanded="false"
           aria-controls="settingsMenu">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -284,10 +284,10 @@
           </div>
           <span class="nav-link-text ms-1">Settings</span>
         </a>
-        <div class="collapse" id="settingsMenu">
+        <div class="collapse {{ Route::is('publisher.profile.*') ? 'show' : '' }}" id="settingsMenu">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('publisher.user-profile')}}">
+            <li class="nav-item {{ Route::is('publisher.profile.user-profile') ? 'active' : '' }}">
+              <a class="nav-link" href="{{route('publisher.profile.user-profile')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> My Profile </span>
               </a>

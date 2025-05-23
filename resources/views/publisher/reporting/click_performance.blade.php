@@ -2,7 +2,7 @@
 
 
 @section('main-content')
-  <div class="d-flex justify-content-end"><a href="{{route('publisher.advertiser-performance')}}" class="btn btn-secondary">Advertisers
+  <div class="d-flex justify-content-end"><a href="{{route('publisher.report.advertiser-performance')}}" class="btn btn-secondary">Advertisers
     Performance</a></div>
 
   <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
