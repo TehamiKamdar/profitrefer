@@ -287,7 +287,7 @@
         <div class="collapse" id="settingsMenu">
           <ul class="nav ms-4 ps-3">
             <li class="nav-item">
-              <a class="nav-link" href="./profile.html">
+              <a class="nav-link" href="{{route('publisher.user-profile')}}">
                 <span class="sidenav-mini-icon"> </span>
                 <span class="sidenav-normal"> My Profile </span>
               </a>

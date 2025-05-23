@@ -6,6 +6,7 @@ use App\Http\Controllers\Publisher\PromoteController as PublisherPromoteControll
 use App\Http\Controllers\Publisher\ReportController as PublisherReportController;
 use App\Http\Controllers\Publisher\FinanceController as PublisherFinanceController;
 use App\Http\Controllers\Publisher\ToolController as PublisherToolController;
+use App\Http\Controllers\Publisher\ProfileController as PublisherProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,4 +57,8 @@ Route::group(["prefix"=> "publisher", "as" => "publisher."], function () {
     Route::get('link-generator', [PublisherToolController::class, 'getLinkGenerator'])->name('link-generator');
     Route::get('api', [PublisherToolController::class, 'getApi'])->name('api');
     Route::get('download-export-files', [PublisherToolController::class, 'getExportFiles'])->name('download-export-files');
+
+
+    // Publisher -> Profile Page
+    Route::get('profile', [PublisherProfileController::class, 'getInformation'])->name('user-profile');
 });
