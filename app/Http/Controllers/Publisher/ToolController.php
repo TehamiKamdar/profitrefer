@@ -8,12 +8,18 @@ use Illuminate\Http\Request;
 class ToolController extends Controller
 {
     public function getLinkGenerator(){
-        return view('publisher.tools.link_generator');
+        $menu = "Tools";
+        $title = "Link Generator";
+        return view('publisher.tools.link_generator', compact('menu', 'title'));
     }
     public function getApi(){
-        return view('publisher.tools.api');
+        $menu = "Tools";
+        $title = "Api";
+        return view('publisher.tools.api', compact('menu', 'title'));
     }
     public function getExportFiles(){
-        return view('publisher.tools.download_export_files');
+        $menu = "Tools";
+        $title = "Export Files";
+        return view('publisher.tools.download_export_files', compact('menu', 'title'));
     }
 }

@@ -8,14 +8,20 @@ use Illuminate\Http\Request;
 class PromoteController extends Controller
 {
     public function getCoupons(){
-        return view('publisher.promote.coupons');
+        $menu = "Promotions";
+        $title = "Coupons";
+        return view('publisher.promote.coupons', compact('menu', 'title'));
     }
 
     public function getTextLinks(){
-        return view('publisher.promote.text_links');
+        $menu = "Promotions";
+        $title = "Text Links";
+        return view('publisher.promote.text_links', compact('menu', 'title'));
     }
 
     public function getDeepLinks(){
-        return view('publisher.promote.deep_links');
+        $menu = "Promotions";
+        $title = "Deep Links";
+        return view('publisher.promote.deep_links', compact('menu', 'title'));
     }
 }

@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     public function getInformation(){
-        return view('publisher.profile.index');
+        $menu = "Settings";
+        $title = "Profile";
+        return view('publisher.profile.index', compact('menu', 'title'));
     }
 }

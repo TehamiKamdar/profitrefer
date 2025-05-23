@@ -9,6 +9,8 @@ class HomeController extends Controller
 {
   public function index()
   {
-    return view("publisher.index");
+    $menu = "Dashboard";
+    $title ="Dashboard";
+    return view("publisher.index", compact('menu', 'title'));
   }
 }
