@@ -4,6 +4,7 @@ use App\Http\Controllers\Publisher\AdvertiserController as PublisherAdvertiserCo
 use App\Http\Controllers\Publisher\HomeController as PublisherHomeController;
 use App\Http\Controllers\Publisher\PromoteController as PublisherPromoteController;
 use App\Http\Controllers\Publisher\ReportController as PublisherReportController;
+use App\Http\Controllers\Publisher\FinanceController as PublisherFinanceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,4 +47,6 @@ Route::group(["prefix"=> "publisher", "as" => "publisher."], function () {
 
 
     //Publisher -> Finance Pages
+    Route::get('finance-overview', [PublisherFinanceController::class, 'getFinanceOverview'])->name('finance-overview');
+    Route::get('payments', [PublisherFinanceController::class, 'getPayments'])->name('payments');
 });
