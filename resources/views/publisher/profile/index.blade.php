@@ -7,7 +7,7 @@
     <div class="d-flex justify-content-between align-items-end">
       <div class="d-flex align-items-center">
       <div class="avatar avatar-xl position-relative me-3">
-        <img src="../assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-md shadow-sm">
+        <img src="{{asset('assets/img/bruce-mars.jpg')}}" alt="profile_image" class="w-100 border-radius-md shadow-sm">
       </div>
       <div>
         <h5 class="mb-1 text-white font-weight-bolder">

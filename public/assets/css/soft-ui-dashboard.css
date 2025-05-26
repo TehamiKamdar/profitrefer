@@ -11348,7 +11348,7 @@ fieldset:disabled .btn {
 }
 
 .bg-purple{
-  background-color: rgb(179, 42, 179) !important; 
+  background-color: rgb(179, 42, 179) !important;
 }
 
 .bg-orange{
@@ -11953,6 +11953,16 @@ fieldset:disabled .btn {
 
 .max-width-500 {
   max-width: 500px !important;
+}
+
+@media (min-width: 320px) {
+    .mb-xs-4{
+        margin-bottom: 1.5rem;
+    }
+
+    .mt-xs-4{
+        margin-top: 1.5rem;
+    }
 }
 
 @media (min-width: 576px) {

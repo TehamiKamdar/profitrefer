@@ -67,11 +67,16 @@
           </div>
           <div class="card-body">
           <p class="text-sm text-center">
-            Amazon is a global leader in e-commerce, cloud computing, and digital streaming. Founded in 1994
-            by Jeff Bezos, the company has revolutionized the way the world shops online. With a commitment
-            to customer satisfaction, fast delivery, and a vast selection of products, Amazon empowers
-            millions of customers and businesses worldwide. Whether it’s through Prime membership, Alexa
-            smart devices, or AWS cloud solutions, Amazon continues to innovate and shape the future of
+            Amazon is a global leader in e-commerce, cloud computing, and digital streaming.
+            Founded in 1994
+            by Jeff Bezos, the company has revolutionized the way the world shops online. With a
+            commitment
+            to customer satisfaction, fast delivery, and a vast selection of products, Amazon
+            empowers
+            millions of customers and businesses worldwide. Whether it’s through Prime
+            membership, Alexa
+            smart devices, or AWS cloud solutions, Amazon continues to innovate and shape the
+            future of
             digital commerce and technology.
           </p>
           </div>
@@ -84,11 +89,16 @@
           </div>
           <div class="card-body">
           <p class="text-sm text-center">
-            By using Amazon services, customers agree to comply with its terms and policies, including
-            responsible use of accounts, adherence to return and refund policies, and respect for content
-            and intellectual property rights. Product availability, pricing, and promotions may change
-            without notice. All users are encouraged to read the full Terms of Service and Privacy Policy to
-            understand their rights and obligations. Misuse of the platform may result in account suspension
+            By using Amazon services, customers agree to comply with its terms and policies,
+            including
+            responsible use of accounts, adherence to return and refund policies, and respect
+            for content
+            and intellectual property rights. Product availability, pricing, and promotions may
+            change
+            without notice. All users are encouraged to read the full Terms of Service and
+            Privacy Policy to
+            understand their rights and obligations. Misuse of the platform may result in
+            account suspension
             or other corrective action.
           </p>
           </div>
@@ -352,7 +362,8 @@
                 </a>
                 <input type="text" id="copyText"
                 value="https://app.theaffilo.com/track?linkmid=386129147&linkaffid=79526583" hidden>
-                <button id="copyBtn" class="btn btn-primary mt-3 w-auto">Copy Link</button>
+                <button id="copyBtn" class="btn btn-primary mt-3 w-auto">Copy
+                Link</button>
               </div>
               </div>
             </div>
@@ -372,7 +383,8 @@
                 https://app.theaffilo.com/short/pdqKVMGnF1
                 </a>
                 <input type="text" id="copyText2" value="https://app.theaffilo.com/short/pdqKVMGnF1" hidden>
-                <button id="copyBtn2" class="btn btn-primary mt-3 w-auto">Copy Link</button>
+                <button id="copyBtn2" class="btn btn-primary mt-3 w-auto">Copy
+                Link</button>
               </div>
               </div>
             </div>
@@ -397,7 +409,8 @@
               <div>
               <input type="text" class="form-control" placeholder="Brand Name" required>
               </div>
-              <p class="text-success text-sm mt-2"><i class="fa fa-check"></i> Deep Link</p>
+              <p class="text-success text-sm mt-2"><i class="fa fa-check"></i> Deep Link
+              </p>
               <div class="mb-3">
               <input type="text" class="form-control" placeholder="Enter Landing Page (Optional)">
               </div>
@@ -418,4 +431,78 @@
 
     </div>
   </div>
+@endsection
+
+@section('partial-scripts')
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const copyText = document.getElementById('copyText');
+
+    copyBtn.addEventListener('click', () => {
+    // Copy to clipboard
+    navigator.clipboard.writeText(copyText.value).then(() => {
+      // Change button style and text
+      copyBtn.classList.remove('btn-primary');
+      copyBtn.classList.add('btn-success');
+      copyBtn.textContent = 'Copied!';
+
+      // Optional: revert after a delay
+      setTimeout(() => {
+      copyBtn.classList.remove('btn-success');
+      copyBtn.classList.add('btn-primary');
+      copyBtn.textContent = 'Copy Link';
+      }, 2000);
+    });
+    });
+
+    const copyBtn2 = document.getElementById('copyBtn2');
+    const copyText2 = document.getElementById('copyText2');
+
+    copyBtn2.addEventListener('click', () => {
+    // Copy to clipboard
+    navigator.clipboard.writeText(copyText2.value).then(() => {
+      // Change button style and text
+      copyBtn2.classList.remove('btn-primary');
+      copyBtn2.classList.add('btn-success');
+      copyBtn2.textContent = 'Copied!';
+
+      // Optional: revert after a delay
+      setTimeout(() => {
+      copyBtn.classList.remove('btn-success');
+      copyBtn.classList.add('btn-primary');
+      copyBtn.textContent = 'Copy Link';
+      }, 2000);
+    });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+    $('.table').DataTable({
+      paging: true,
+      searching: true,
+      lengthChange: true,
+      info: true,
+      ordering: false,
+      dom: '<"d-flex justify-content-between align-items-center mb-3"f>t<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
+      language: {
+      paginate: {
+        previous: '<i class="ri-arrow-left-double-line"></i>',
+        next: '<i class="ri-arrow-right-double-line"></i>'
+      },
+      lengthMenu: "_MENU_"
+      },
+      pageLength: 25
+      // t = table body only
+      // <"class"ip> = info + pagination inside div left aligned, with margin-top
+    });
+    $('.dataTables_info').addClass('text-xs')
+    $('.dataTables_length label select').removeClass('form-select')
+    });
+
+
+  </script>
 @endsection

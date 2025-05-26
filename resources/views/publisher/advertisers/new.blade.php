@@ -108,10 +108,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -147,10 +145,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -186,10 +182,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -225,10 +219,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -264,10 +256,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -303,10 +293,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -342,10 +330,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -381,10 +367,8 @@
         </div>
       </div>
       <div class="col-12">
-        <a href="./view-advertiser.html"
-        class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
-        style="background-color: rgb(219, 248, 255);">
-        <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+        <a href="{{route('publisher.advertiser.view-advertisers')}}"  class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary" style="background-color: rgb(219, 248, 255);">
+            <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
         </a>
       </div>
       </div>
@@ -394,26 +378,3 @@
   </div>
 @endsection
 
-@section('partial-scripts')
-  <script>
-    const selectAll = document.getElementById("selectAll");
-    const checkboxes = document.querySelectorAll(".multi-select");
-
-    selectAll.addEventListener("change", function () {
-    checkboxes.forEach(checkbox => {
-      checkbox.checked = this.checked;
-    });
-    });
-
-    checkboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", function () {
-      if (!this.checked) {
-      selectAll.checked = false;
-      } else if (document.querySelectorAll(".multi-select:checked").length === checkboxes.length) {
-      selectAll.checked = true;
-      }
-    });
-    });
-
-  </script>
-@endsection
